@@ -1,0 +1,102 @@
+body {
+    background-color: #f0f0f0;
+}
+
+label {
+    text-align: left;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-header {
+    background-color: #fbc1bc;
+}
+
+.main-footer {
+    background-color: #fbc1bc;
+    margin-top: auto;
+}
+
+.contents-left {
+    border-right: 1px solid #315b96;
+    background-color: #ecfcff;
+    height: 70px;
+}
+.contents-center {
+    background-color: #ecfcff;
+    height: 70px;
+}
+.contents-right {
+    border-left: 1px solid #315b96;
+    background-color: #ecfcff;
+    height: 70px;
+}
+.list-header {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.contents-top {
+    border-top: 3px solid #315b96;
+}
+.contents-middle {
+    border-top: 1px solid #315b96;
+}
+.contents-last {
+    border-bottom: 3px solid #315b96;
+}
+.list-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    position: absolute;
+    width: 30px; /*ローディングアイコンの横サイズ*/
+    height: 30px; /*ローディングアイコンの縦サイズ*/
+    border-radius: 50%; /*CSS3で円を書く*/
+    border: 8px solid #315b96; /*円に○の白枠をつける*/
+    border-right-color: transparent; /*円の右にC状の空きをつける*/
+    animation: spin 1s linear infinite; /*1秒毎にくるくる回転するアニメーション*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.2;
+    } /*0%の時は20％の透明度*/
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    } /*50%の時は透明度なし*/
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.2;
+    } /*100%の時に20％の透明度に戻る*/
+}
+
+.modal-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    margin: auto;
+    pointer-events: none;
+}
+
+.modal-content {
+    pointer-events: all;
+}
+
+.col-4 {
+    /* border: 1px solid #315b96; */
+}
