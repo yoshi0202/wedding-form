@@ -102,15 +102,13 @@ function renderPage() {
         });
 }
 function showRows(name) {
-    $('[data-kana="' + name + '"')
-        .parent()
+    $('.name[data-kana="' + name + '"')
         .parent()
         .show();
 }
 
 function hideRows(name) {
-    $('[data-kana="' + name + '"')
-        .parent()
+    $('.name[data-kana="' + name + '"')
         .parent()
         .hide();
 }
@@ -122,7 +120,8 @@ function createList(data) {
     html += '<div class="row">';
     html += '<div class="col-12 contents-top"></div>';
     data.Items.map(function(val, index) {
-        html += '<div class="col-4 list-contents contents-left"';
+        html += '<div class="col-12 list-rows"><div class="row">';
+        html += '<div class="col-4 name list-contents contents-left"';
         html += " data-kana=" + val.kana + ">" + val.name + "</div>";
         html += '<div class="col-4 list-contents contents-center"';
         html += ">" + val.invite + "</div>";
@@ -141,7 +140,7 @@ function createList(data) {
         } else {
             html += ' value="0">出席済</button>';
         }
-        html += '</div><div class="col-12 contents-middle"></div>';
+        html += '</div></div></div><div class="col-12 contents-middle"></div>';
     });
     html += '<div class="col-12 contents-last"></div></div></div>';
     return html;
