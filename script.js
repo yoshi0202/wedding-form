@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
     // init page
     renderPage();
 
